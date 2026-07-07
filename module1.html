@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #ff6600;
+            color: white;
+            text-align: center;
+            padding: 25px 20px 15px 20px;
+        }
+
+        .container {
+            width: 95%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #ff6600;
+            margin-top: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #ff6600;
+            color: white;
+        }
+
+        tr:nth-child(even) td:not([rowspan]) {
+            background: #f9f9f9;
+        }
+
+        a.btn {
+            background: #0984e3;
+            color: white;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+            a.btn:hover {
+                background: #0263b3;
+            }
+
+        .card {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+            .card h3 {
+                margin-top: 0;
+                color: #333;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 5px;
+            }
+
+        /* Top Navigation Menu Styles */
+        nav {
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+
+            nav a {
+                color: #ddd;
+                text-decoration: none;
+                margin: 0 15px;
+                font-weight: bold;
+                font-size: 0.9rem;
+                text-transform: uppercase;
+            }
+
+                nav a:hover {
+                    color: #ff6600;
+                }
+
+        .nav-btn-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px 0;
+            background: #444;
+        }
+
+        .nav-btn {
+            background: #e65c00;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+            .nav-btn:hover {
+                background: #ff6600;
+                box-shadow: 0 2px 10px rgba(255,102,0,0.4);
+            }
+    </style>
+    <script>
+        function viewFeature(featureName) {
+            alert("Opening " + featureName + " Viewer...");
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Module 1 - ICT Competency Tracker</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="module1.html">module 1</a>
+        <a href="module2.html">module 2</a>
+        <a href="module3.html">module 3</a>
+        <a href="module4.html">module 4</a>
+        <a href="module5.html">module 5</a>
+        <a href="module6.html">module 6</a>
+        <a href="shortcourses.html">Short Courses</a>
+        <a href="reports.html">student reports</a>
+        <a href="contact.html">Contacts</a>
+    </nav>
+
+    <div class="nav-btn-container">
+        <button class="nav-btn" onclick="viewFeature('Curriculum'); window.location.href='cu.pdf';">view curriculum</button>
+        <button class="nav-btn" onclick="viewFeature('Occupational Standards'); window.location.href='os.pdf';">Occupational Standards</button>
+        <button class="nav-btn" onclick="viewFeature('Attendance'); window.location.href='cu.pdf';">Attendance</button>
+        <button class="nav-btn" onclick="viewFeature('Timetable'); window.location.href='timetable.pdf';">Timetable</button>
+    </div>
+
+    <div class="container">
+
+        <h2>Practical Assessment Scores</h2>
+
+        <table>
+            <tr>
+                <th rowspan="2">Student</th>
+                <th rowspan="2">Unit</th>
+                <th colspan="2">Practical 1</th>
+                <th rowspan="2">View Exam</th>
+                <th colspan="2">Practical 2</th>
+                <th rowspan="2">View Exam</th>
+                <th colspan="2">Practical 3</th>
+                <th rowspan="2">View Exam</th>
+                <th colspan="2">Averages & Outcomes</th>
+            </tr>
+            <tr>
+                <th>Prac</th>
+                <th>Oral</th>
+                <th>Prac</th>
+                <th>Oral</th>
+                <th>Prac</th>
+                <th>Oral</th>
+                <th>FA PRAC</th>
+                <th>FAO Average</th>
+           
+            
+            <tr>
+                <td rowspan="2"><b>COLLINS NGOTHO</b></td>
+                <td>Computer essentials</td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td><b>-</b></td>
+                <td><b>-</b></td>
+            </tr>
+            <tr>
+                <td>Computer operations</td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td><b>-</b></td>
+                <td><b>-</b></td>
+            </tr>
+        </table>
+
+       
+
+        <div class="card">
+            <h3>COLLINS NGOTHO</h3>
+            <p><b>Computer Network Setup</b> - <a href="#" class="btn">View Portfolio</a></p>
+            <p><b>Computer Repair and Maintenance</b> - <a href="#" class="btn">View Portfolio</a></p>
+        </div>
+
+        <div class="card">
+            <h3 style="color:orange;">TRAINERS e-PORTFOLIO</h3>
+
+            <p style="color:blue;"><b> computer essentials</b></p>
+            <h3 style="color:orangered;">CONTINOUS practical Assessments</h3>
+            <p>practical 1 <a href="cat1mk.pdf" class="btn">View practical 1</a></p>
+            <p>practical 2 <a href="cat2.pdf" class="btn">View practical 2</a></p>
+            <p>practical 3 <a href="cat3.pdf" class="btn">View practical 3</a></p>
+
+            <h3 style="color:orangered;">CONTINOUS practical Observation checklist</h3>
+            <p>practical 1 checklist <a href="cat1mk.pdf" class="btn">View practical 1 checklist</a></p>
+            <p>practical 2 checklist <a href="cat2.pdf" class="btn">View practical 2 checklist</a></p>
+            <p>practical 3 checklist <a href="cat3.pdf" class="btn">View practical 3 checklist</a></p>
+
+            <br />
+
+            <p style="color:blue;"><b>Computer operations</b></p>
+            <h3 style="color:orangered;">CONTINOUS practical Assessments</h3>
+            <p>practical 1 <a href="cat1mk.pdf" class="btn">View practical 1</a></p>
+            <p>practical 2 <a href="cat2.pdf" class="btn">View practical 2</a></p>
+            <p>practical 3 <a href="cat3.pdf" class="btn">View practical 3</a></p>
+
+            <h3 style="color:orangered;">CONTINOUS practical Observation checklist</h3>
+            <p>practical 1 checklist <a href="cat1mk.pdf" class="btn">View practical 1 checklist</a></p>
+            <p>practical 2 checklist <a href="cat2.pdf" class="btn">View practical 2 checklist</a></p>
+            <p>practical 3 checklist <a href="cat3.pdf" class="btn">View practical 3 checklist</a></p>
+        </div>
+    </div>
+</body>
+</html>
