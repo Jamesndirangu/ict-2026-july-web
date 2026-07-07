@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #ff6600;
+            color: white;
+            text-align: center;
+            padding: 25px 20px 15px 20px;
+        }
+
+        .container {
+            width: 95%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #ff6600;
+            margin-top: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #ff6600;
+            color: white;
+        }
+
+        tr:nth-child(even) td:not([rowspan]) {
+            background: #f9f9f9;
+        }
+
+        a.btn {
+            background: #0984e3;
+            color: white;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        a.btn:hover {
+            background: #0263b3;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        /* Top Navigation Menu Styles */
+        nav {
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #ff6600;
+        }
+
+        .nav-btn-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px 0;
+            background: #444;
+        }
+
+        .nav-btn {
+            background: #e65c00;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-btn:hover {
+            background: #ff6600;
+            box-shadow: 0 2px 10px rgba(255,102,0,0.4);
+        }
+    </style>
+    <script>
+        function viewFeature(featureName) {
+            alert("Opening " + featureName + " Viewer...");
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Module 2 - ICT Competency Tracker</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="module1.html">module 1</a>
+        <a href="module2.html">module 2</a>
+        <a href="module3.html">module 3</a>
+        <a href="module4.html">module 4</a>
+        <a href="module5.html">module 5</a>
+        <a href="module6.html">module 6</a>
+        <a href="shortcourses.html">Short Courses</a>
+        <a href="reports.html">student reports</a>
+        <a href="contact.html">Contacts</a>
+    </nav>
+    
+    <div class="nav-btn-container">
+        <button class="nav-btn" onclick="viewFeature('Curriculum'); window.location.href='cu.pdf';">view curriculum</button>
+        <button class="nav-btn" onclick="viewFeature('Occupational Standards'); window.location.href='os.pdf';">Occupational Standards</button>
+        <button class="nav-btn" onclick="viewFeature('Attendance'); window.location.href='cu.pdf';">Attendance</button>
+        <button class="nav-btn" onclick="viewFeature('Timetable'); window.location.href='timetable.pdf';">Timetable</button>
+        <button class="nav-btn" onclick="viewFeature('learning plan-computer Network'); window.location.href='netsetupmod2LP.pdf';">Computer Network-learning plan</button>
+        <button class="nav-btn" onclick="viewFeature('learning plan-computer repair'); window.location.href='Rpairmod2 LP2026.pdf';">Computer repair-learning plan</button>
+    </div>
+
+    <div class="container">
+
+        <h2>Practical Assessment Scores</h2>
+
+        <table>
+            <tr>
+                <th rowspan="2">Student</th>
+                <th rowspan="2">Unit</th>
+                <th colspan="2">Practical 1</th>
+                <th rowspan="2">View Exam</th>
+                <th colspan="2">Practical 2</th>
+                <th rowspan="2">View Exam</th>
+                <th colspan="2">Practical 3</th>
+                <th rowspan="2">View Exam</th>
+                <th colspan="2">Averages & Outcomes</th>
+            </tr>
+            <tr>
+                <th>Prac</th>
+                <th>Oral</th>
+                <th>Prac</th>
+                <th>Oral</th>
+                <th>Prac</th>
+                <th>Oral</th>
+                <th>FA PRAC</th>
+                <th>FAO Average</th>
+            </tr>
+
+            <tr>
+                <td rowspan="2"><b>SHIRLENE KARIMI</b></td>
+                <td>Computer Network Setup</td>
+                <td>92%</td>
+                <td>73%</td>
+                <td><a href="shirleneanetworkprac2term2.pdf" class="btn">View Exam</a></td>
+                <td>86%</td>
+                <td>63%</td>
+                <td><a href="shirlenenetworkpractical2.pdf" class="btn">View Exam</a></td>
+                <td>68%</td>
+                <td>53%</td>
+                <td><a href="shirlene.networkprac3.pdf" class="btn">View Exam</a></td>
+                <td><b>82</b></td>
+                <td><b>63</b></td>
+            </tr>
+            <tr>
+                <td>Computer Repair and Maintenance</td>
+                <td>82%</td>
+                <td>63%</td>
+                <td><a href="shirlene comp repair practical 1 module 2.pdf" class="btn">View Exam</a></td>
+                <td>82%</td>
+                <td>60%</td>
+                <td><a href="shirlenerepairpractical2.pdf" class="btn">View Exam</a></td>
+                <td>62%</td>
+                <td>53%</td>
+                <td><a href="Shirlenerepairprac3term2.pdf" class="btn">View Exam</a></td>
+                <td><b>75</b></td>
+                <td><b>59</b></td>
+            </tr>
+
+            <tr>
+                <td rowspan="2"><b>COLLINS NGOTHO</b></td>
+                <td>Computer Network Setup</td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td><b>-</b></td>
+                <td><b>-</b></td>
+            </tr>
+            <tr>
+                <td>Computer Repair and Maintenance</td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td><b>-</b></td>
+                <td><b>-</b></td>
+            </tr>
+        </table>
+
+        <h2>Portfolio of Evidence</h2>
+        <div class="card">
+            <h3>SHIRLENE KARIMI</h3>
+            <h3>COMPUTER NETWORK SETUP</h3>
+            <p><b>Computer Network Setup PRACTICAL 1</b> - <a href="shirlenenetworkprac1poes.pdf" class="btn">View Portfolio</a></p>
+            <p><b>Computer Network Setup-PRACTICAL 2</b> - <a href="shirlenenetworkpractical2images.pdf" class="btn">View Portfolio</a></p>
+            <p><b>Computer Network Setup-PRACTICAL 3</b> - <a href="#" class="btn">View Portfolio</a></p>
+            <H3>COMPUTER REPAIR</H3>
+            <p><b>Computer Repair and Maintenance-PRACTICAL1</b> - <a href="shirlenerepairprac1POES.pdf" class="btn">View Portfolio</a></p>
+            <p><b>Computer Repair and Maintenance-PRACTICAL2</b> - <a href="shirlenerepairprac2images.pdf" class="btn">View Portfolio</a></p>
+            <p><b>Computer Repair and Maintenance-PRACTICAL3</b> - <a href="#" class="btn">View Portfolio</a></p>
+        </div>
+
+        <div class="card">
+            <h3>COLLINS NGOTHO</h3>
+            <p><b>Computer Network Setup</b> - <a href="#" class="btn">View Portfolio</a></p>
+            <p><b>Computer Repair and Maintenance</b> - <a href="#" class="btn">View Portfolio</a></p>
+        </div>
+
+        <div class="card">
+            <h3 style="color:orange;">TRAINERS e-PORTFOLIO</h3>
+            
+            <p style="color:blue;"><b>Computer Network Setup</b></p>
+            <h3 style="color:orangered;">CONTINOUS practical Assessments</h3>
+            <p>practical 1 <a href="Networkprac1level5mod2.pdf" class="btn">View practical 1</a></p>
+            <p>practical 2 <a href="networkprac2term2mod2.pdf" class="btn">View practical 2</a></p>
+            <p>practical 3 <a href="COMPUTER NETWORK PRAC3MOD2.pdf" class="btn">View practical 3</a></p>
+            
+            <h3 style="color:orangered;">CONTINOUS practical Observation checklist</h3>
+            <p>practical 1 checklist <a href="netcheklist1term2level5md2.pdf" class="btn">View practical 1 checklist</a></p>
+            <p>practical 2 checklist <a href="NETWORKCHECKLIST2MOD2.PDF" class="btn">View practical 2 checklist</a></p>
+            <p>practical 3 checklist <a href="NETWORKprac3checklistmod2.pdf" class="btn">View practical 3 checklist</a></p>
+            
+            <br />
+            
+            <p style="color:blue;"><b>Computer Repair and Maintenance</b></p>
+            <h3 style="color:orangered;">CONTINOUS practical Assessments</h3>
+            <p>practical 1 <a href="comprepairprac1mod2.pdf" class="btn">View practical 1</a></p>
+            <p>practical 2 <a href="REPAIRPRAC2MOD2.pdf" class="btn">View practical 2</a></p>
+            <p>practical 3 <a href="repairprac3.pdf" class="btn">View practical 3</a></p>
+            
+            <h3 style="color:orangered;">CONTINOUS practical Observation checklist</h3>
+            <p>practical 1 checklist <a href="Repairprac1checklist1.pdf" class="btn">View practical 1 checklist</a></p>
+            <p>practical 2 checklist <a href="repairchecklist2term2.pdf" class="btn">View practical 2 checklist</a></p>
+            <p>practical 3 checklist <a href="REPAIRPRAC3CHECKLIST.pdf" class="btn">View practical 3 checklist</a></p>
+        </div>
+    </div>
+</body>
+</html>

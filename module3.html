@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3</title>
+    <style>
+        body {
+            font-family: Segoe UI,sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4
+        }
+
+        header {
+            background: #ff6600;
+            color: white;
+            text-align: center;
+            padding: 25px 20px 15px 20px
+        }
+
+        .container {
+            width: 95%;
+            margin: auto;
+            padding: 20px
+        }
+
+        h2 {
+            color: #ff6600;
+            margin-top: 30px
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1)
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center
+        }
+
+        th {
+            background: #ff6600;
+            color: white
+        }
+
+        tr:nth-child(even) td:not([rowspan]) {
+            background: #f9f9f9;
+        }
+        /* Zebra striping for non-rowspan cells */
+        a.btn {
+            background: #0984e3;
+            color: white;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            display: inline-block
+        }
+
+            a.btn:hover {
+                background: #0263b3
+            }
+
+        .card {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1)
+        }
+
+            .card h3 {
+                margin-top: 0;
+                color: #333;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 5px
+            }
+
+        /* Interactive Top Navigation Menu */
+        .nav-menu {
+            background: #333;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px;
+            gap: 15px;
+        }
+        .nav {
+            background: var(--white);
+            width: 100%;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+            nav a {
+                color: var(--dark-grey);
+                text-decoration: none;
+                margin: 0 20px;
+                font-weight: bold;
+                font-size: 0.9rem;
+                text-transform: uppercase;
+            }
+                nav a:hover {
+                    color: var(--primary-orange);
+                }
+            .nav-btn {
+            background:orange;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+            .nav-btn:hover {
+                background: #ff6600;
+                box-shadow: 0 2px 10px rgba(255,102,0,0.4);
+            }
+
+        footer {
+            background:orange;
+            color:white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+    </style>
+    <script>
+// Placeholder functions for the interactive navigation buttons
+function viewFeature(featureName) {
+    alert("Opening " + featureName + " Viewer...");
+    // You can replace these alerts with actual redirection logic or modal popups
+    // e.g., window.location.href = featureName.toLowerCase().replace(" ", "-") + ".html";
+}
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Module 3 - ICT Competency Tracker</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="module1.html">module 1</a>
+        <a href="module2.html">module 2</a>
+        <a href="module3.html">module 3</a>
+        <a href="module4.html">module 4</a>
+        <a href="module5.html">module 5</a>
+        <a href="module6.html">module 6</a>
+        <a href="shortcourses.html">Short Courses</a>
+        <a href="reports.html">student reports</a>
+        <a href="contact.html">Contacts</a>
+        <div class="nav">
+    </nav>
+    <button class="nav-btn" onclick="viewFeature('Curriculum')"><a href="cu.pdf">view curriculumn</a></button>
+    <button class="nav-btn" onclick="viewFeature('Occupational Standards')"><a href="os.pdf">Occupational Standards</a></button>
+    <button class="nav-btn" onclick="viewFeature('Attendance')"><a href="cu.pdf">Attendance</a></button>
+    <button class="nav-btn" onclick="viewFeature('Timetable')"><a href="timetable.pdf">Timetable</a></button>
+    <button class="nav-btn" onclick="viewFeature('softwareLP')"><a href="computer software level 5 LP.pdf">software-learning plan</a></button>
+    <button class="nav-btn" onclick="viewFeature('NetworkLP')"><a href="netdesign learning plan mod 3.pdf">Network-learning plan</a></button>
+    <button class="nav-btn" onclick="viewFeature('work EthicsLP')"><a href="">work Ethics-Learning plan</a></button>
+    <button class="nav-btn" onclick="viewFeature('Basic electronics LP')"><a href="BELP.pdf">Basic Electronics-learning plan</a></button>
+    </div>
+
+    <div class="container">
+
+        <h2>Practical Assessment Scores</h2>
+
+        <table>
+            <tr>
+                <th>Student</th>
+                <th>Unit</th>
+                <th>Practical 1</th>
+                <th>View Exam</th>
+                <th>Practical 2</th>
+                <th>View Exam</th>
+                <th>Practical 3</th>
+                <th>View Exam</th>
+                <th>Average</th>
+            </tr>
+
+            <tr>
+                <td rowspan="4"><b>JOY NKATHA</b></td>
+                <td>Network Design and Management</td>
+                <td>93%</td>
+                <td><a href="joynetworkprac1.pdf" class="btn">View Exam</a></td>
+                <td>82%</td>
+                <td><a href="JOYNETWORKPRAC2.pdf" class="btn">View Exam</a></td>
+                <td>-</td>
+                <td>-<a href="#" class="btn">View Exam</a></td>
+                <td><b>-</b></td>
+            </tr>
+            <tr>
+                <td>Install Computer Software</td>
+                <td>84%</td>
+                <td><a href="joy-software-prac1.pdf" class="btn">View Exam</a></td>
+                <td>100%</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td><b>-</b></td>
+            </tr>
+            <tr>
+                <td>Basic Electronics</td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td><b>NOT APPLICABLE</b></td>
+            </tr>
+            <tr>
+                <td>Work Ethics</td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td><b>NOT APPLICABLE</b></td>
+            </tr>
+
+            <tr>
+                <td rowspan="4"><b>MARCUS KAIRU</b></td>
+                <td>Network Design and Management</td>
+                <td>91%</td>
+                <td><a href="Marcus network design practical 1 module 3 (1).pdf" class="btn">View Exam</a></td>
+                <td>84%</td>
+                <td><a href="MARCUSNETWORKPRAC2.pdf" class="btn">View Exam</a></td>
+                <td>98%</td>
+                <td><a href="Marcus network design practical 3 module 3.pdf" class="btn">View Exam</a></td>
+                <td><b>91</b></td>
+            </tr>
+            <tr>
+                <td>Install Computer Software</td>
+                <td>88%</td>
+                <td><a href="marcussoftwareprac1.pdf" class="btn">View Exam</a></td>
+                <td>98%</td>
+                <td><a href="Marcus comp Software practical 2.pdf" class="btn">View Exam</a></td>
+                <td>84%</td>
+                <td><a href="MARCUS-SOFTWARE-PRQC3.pdf" class="btn">View Exam</a></td>
+                <td><b>90</b></td>
+            </tr>
+            <tr>
+                <td>Basic Electronics</td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td><b>NOT APPLICABLE</b></td>
+            </tr>
+            <tr>
+                <td>Work Ethics</td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td><b>NOT APPLICABLE</b></td>
+            </tr>
+
+            <tr>
+                <td rowspan="4"><b>BRIAN MAINA</b></td>
+                <td>Network Design and Management</td>
+                <td>97%</td>
+                <td><a href="BRIAN-NETWORK-PRAC1.pdf" class="btn">View Exam</a></td>
+                <td>84%</td>
+                <td><a href="BRIANNETWORKPRAC2.pdf" class="btn">View Exam</a></td>
+                <td>94%</td>
+                <td><a href="Brian network and design practical3.pdf" class="btn">View Exam</a></td>
+                <td>92<b></b></td>
+            </tr>
+            <tr>
+                <td>Install Computer Software</td>
+                <td>84%</td>
+                <td><a href="BRIAN-SOFTWARE-PRAC1.pdf" class="btn">View Exam</a></td>
+                <td>100%</td>
+                <td><a href="briancomputer software practical 2.pdf" class="btn">View Exam</a></td>
+                <td>84%</td>
+                <td><a href="BRIAN-SOFTWAREPRAC3.pdf" class="btn">View Exam</a></td>
+                <td><b>89</b></td>
+            </tr>
+            <tr>
+                <td>Basic Electronics</td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td><b>NOT APPLICABLE</b></td>
+            </tr>
+            <tr>
+                <td>Work Ethics</td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>NOT APPLICABLE</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td><b>NOT APPLICABLE</b></td>
+            </tr>
+        </table>
+
+
+        <h2>CAT Assessment Scores</h2><hr />
+
+        <table>
+            <tr>
+                <th>Student</th>
+                <th>Unit</th>
+                <th>CAT 1</th>
+                <th>View Exam</th>
+                <th>CAT 2</th>
+                <th>View Exam</th>
+                <th>CAT 3</th>
+                <th>View Exam</th>
+                <th>Average</th>
+            </tr>
+
+            <tr>
+                <td rowspan="4"><b>JOY NKATHA</b></td>
+                <td>Network Design and Management</td>
+                <td>80%</td>
+                <td><a href="joycat1network.pdf" class="btn">View Exam</a></td>
+                <td>90</td>
+                <td><a href="JOYNETWORKDESIGNCAT2.pdf" class="btn">View Exam</a></td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td><b>-</b></td>
+            </tr>
+            <tr>
+                <td>Install Computer Software</td>
+                <td>88%</td>
+                <td><a href="joy-cat 1 software installation.pdf" class="btn">View Exam</a></td>
+                <td>80%</td>
+                <td><a href="JOYSOFTWARECAT2.pdf" class="btn">View Exam</a></td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td><b>-</b></td>
+            </tr>
+            <tr>
+                <td>Basic Electronics</td>
+                <td>96%</td>
+                <td><a href="JOY.BE.Cat1.pdf" class="btn">View Exam</a></td>
+                <td>49%</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td><b>-</b></td>
+            </tr>
+            <tr>
+                <td>Work Ethics</td>
+                <td>97%</td>
+                <td><a href="JOY-WORKETHICSCAT1.pdf" class="btn">View Exam</a></td>
+                <td>88%</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>89%</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td><b>95</b></td>
+            </tr>
+
+            <tr>
+                <td rowspan="4"><b>MARCUS KAIRU</b></td>
+                <td>Network Design and Management</td>
+                <td>72%</td>
+                <td><a href="Marcus network design cat 1.pdf" class="btn">View Exam</a></td>
+                <td>87%</td>
+                <td><a href="MARCUSNETDESIGNCAT2.pdf" class="btn">View Exam</a></td>
+                <td>75%</td>
+                <td><a href="marcusnetworkcat3.pdf" class="btn">View Exam</a></td>
+                <td><b>78</b></td>
+            </tr>
+            <tr>
+                <td>Install Computer Software</td>
+                <td>64%</td>
+                <td><a href="Marcus software installation cat 1.pdf" class="btn">View Exam</a></td>
+                <td>92%</td>
+                <td><a href="marcussoftwarecat2.pdf" class="btn">View Exam</a></td>
+                <td>67%</td>
+                <td><a href="MARCUS-SOFTWARECAT3.pdf" class="btn">View Exam</a></td>
+                <td><b>74</b></td>
+            </tr>
+            <tr>
+                <td>Basic Electronics</td>
+                <td>91%</td>
+                <td><a href="MARCUS.BE.CAT1.pdf" class="btn">View Exam</a></td>
+                <td>35%</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td><b>-</b></td>
+            </tr>
+            <tr>
+                <td>Work Ethics</td>
+                <td>84%</td>
+                <td><a href="Marcus work ethics cat 1 .pdf" class="btn">View Exam</a></td>
+                <td>98%</td>
+                <td><a href="MARCUS-WORKETHICS-CAT2.pdf" class="btn">View Exam</a></td>
+                <td>75%</td>
+                <td><a href="marcusworkethics-CAT3.pdf" class="btn">View Exam</a></td>
+                <td><b>85</b></td>
+            </tr>
+
+            <tr>
+                <td rowspan="4"><b>BRIAN MAINA</b></td>
+                <td>Network Design and Management</td>
+                <td>60%</td>
+                <td><a href="BRIAN-NETWORK-CAT1.pdf" class="btn">View Exam</a></td>
+                <td>94%</td>
+                <td><a href="BRIANNETCAT2.pdf" class="btn">View Exam</a></td>
+                <td>97%</td>
+                <td><a href="Brian  computer network and design cat 3.pdf" class="btn">View Exam</a></td>
+                <td><b>84</b></td>
+            </tr>
+            <tr>
+                <td>Install Computer Software</td>
+                <td>70%</td>
+                <td><a href="brian-software-cat1.pdf" class="btn">View Exam</a></td>
+                <td>84%</td>
+                <td><a href="BRIANSOFTWARECAT2.pdf" class="btn">View Exam</a></td>
+                <td>85%</td>
+                <td><a href="Brian.software.cat3.pdf" class="btn">View Exam</a></td>
+                <td><b>80</b></td>
+            </tr>
+            <tr>
+                <td>Basic Electronics</td>
+                <td>68%</td>
+                <td><a href="BRIAN.BE.CAT1.pdf" class="btn">View Exam</a></td>
+                <td>40%</td>
+                <td><a href="BRIAN-BE_Cat2.pdf" class="btn">View Exam</a></td>
+                <td>-</td>
+                <td><a href="#" class="btn">View Exam</a></td>
+                <td><b>-</b></td>
+            </tr>
+            <tr>
+                <td>Work Ethics</td>
+                <td>97%</td>
+                <td><a href="work ethics cat I Brian.pdf" class="btn">View Exam</a></td>
+                <td>88%</td>
+                <td><a href="Brian work ethics cat 2.pdf" class="btn">View Exam</a></td>
+                <td>97%</td>
+                <td><a href="Brian work ethics cat 3.pdf" class="btn">View Exam</a></td>
+                <td><b>94</b></td>
+            </tr>
+        </table>
+
+
+        <h2>Portfolio of Evidence</h2>
+        <div class="card">
+            <h3>JOY NKATHA</h3>
+            <p><b>Network Design and Management</b></p>
+            <p>portfolio images</p><a href="#" class="btn">View Portfolio images</a>
+            <p>video</p> <a href="#" class="btn">View Portfolio video</a>
+            <p><b>Install Computer Software</b></p>
+            <p>portfolio images</p><a href="#" class="btn">View Portfolio images</a>
+            <p>video</p> <a href="#" class="btn">View Portfolio video</a>
+            <p><b>Basic Electronics</b></p>
+            <p>portfolio images</p><a href="#" class="btn">View Portfolio images</a>
+            <p>video</p> <a href="#" class="btn">View Portfolio video</a>
+            <p><b>Work Ethics</b></p>
+            <p>portfolio images</p><a href="#" class="btn">View Portfolio images</a>
+            <p>video</p> <a href="#" class="btn">View Portfolio video</a>
+        </div>
+
+        <div class="card">
+            <h3>MARKCUS KAIRU</h3>
+            <p><b>Network Design and Management</b></p>
+            <p>portfolio images</p><a href="#" class="btn">View Portfolio images</a>
+            <p>video</p> <a href="#" class="btn">View Portfolio video</a>
+            <p><b>Install Computer Software</b></p>
+            <p>portfolio images</p><a href="#" class="btn">View Portfolio images</a>
+            <p>video</p> <a href="#" class="btn">View Portfolio video</a>
+            <p><b>Basic Electronics</b></p>
+            <p>portfolio images</p><a href="#" class="btn">View Portfolio images</a>
+            <p>video</p> <a href="#" class="btn">View Portfolio video</a>
+            <p><b>Work Ethics</b></p>
+            <p>portfolio images</p><a href="#" class="btn">View Portfolio images</a>
+            <p>video</p> <a href="#" class="btn">View Portfolio video</a>
+        </div>
+
+        <div class="card">
+            <h3>BRIAN MAINA</h3>
+            <p><b>Network Design and Management</b></p>
+            <p>portfolio images</p><a href="brianimagesnetprac1.pdf" class="btn">View Portfolio images</a>
+            <p>video</p> <a href="#" class="btn">View Portfolio video</a>
+            <p><b>Install Computer Software</b></p>
+            <p>portfolio images</p><a href="#" class="btn">View Portfolio images</a>
+            <p>video</p> <a href="#" class="btn">View Portfolio video</a>
+            <p><b>Basic Electronics</b></p>
+            <p><b>Work Ethics</b> - <a href="#" class="btn">View Portfolio</a></p>
+        </div>
+        <div class="card">
+            <h3 style="color:orange;">TRAINERS PORTFOLIO WEBSITE</h3>
+            <p style="color:blue;">
+                <b>Network Design and Management</b><br />
+                <h3>CONTINOUS ASSESSMENT CATS</h3>
+                CAT1 <a href="cat1.pdf" class="btn">View CAT 1</a>
+            </p><br />
+            CAT2 <a href="NETWORKCAT2TERM3.pdf" class="btn">View CAT 2</a></p><br />
+            CAT3 <a href="NETWORKWORKINGCAT3.pdf" class="btn">View CAT 3</a></p>
+            <h3>CONTINOUS ASSESSMENT CATS-MARKING SCHEME</h3>
+            CAT1 MARKING SCHEME <a href="cat1mk.pdf" class="btn">View CAT 1 MARKING SCHEME</a></p><br />
+            CAT2 MARKING SCHEME <a href="networkcat2MARKING SCHEME1.pdf" class="btn">View CAT 2 MARKING SCHEME</a></p><br />
+            CAT3 MARKING SCHEME<a href="NETWORKCAT3MARKING SCHEME.pdf" class="btn">View CAT 3 MARKING SCHEME</a></p>
+            <h3 style="color:orangered;">CONTINOUS practical Assessments</h3>
+            <p>practical 1</p> <a href="netprac1.pdf" class="btn">View pratical 1</a></p><br />
+            <p>practical 2</p> <a href="NETTWORKDESIGNPRAC2TERM3.pdf" class="btn">View pratical 2</a></p><br />
+            <p>practical 3</p><a href="NETWORKDESIGNPRAC3.pdf" class="btn">View practical 3</a></p>
+            <h3 style="color:orangered;">CONTINOUS practical Observation checklist</h3>
+            <p>practical 1 checklist</p> <a href="netdesignchecklist1.pdf" class="btn">View pratical 1 checklist</a></p><br />
+            <p>practical 2 checklist</p> <a href="netDworkchecklis2term3.pdf" class="btn">View pratical 2 hecklist</a></p><br />
+            <p>practical 3 checklist</p><a href="netprac3mod3checklist.pdf" class="btn">View practical 3 checklist</a></p>
+            <p style="color:blue;">
+            <p>video</p> <a href="#" class="btn">View video</a></p><br />
+            <p>POE images</p> <a href="#" class="btn">View POE images</a></p><br />
+            <b>Install Computer Software</b><br />
+            <h3>CONTINOUS ASSESSMENT CATS</h3>
+            <p>CAT 1<a href="cat1.pdf" class="btn">View CAT 1</a></p>
+            <p>CAT 2<a href="SOFTWARECAT2TERM2.pdf" class="btn">View CAT 2</a></p>
+            <p>CAT 3<a href="softwarecat3.pdf" class="btn">View CAT 3</a></p>
+            <h3>CONTINOUS ASSESSMENT CATS-MARKING SCHEME</h3>
+            CAT1 MARKING SCHEME <a href="cat1mk.pdf" class="btn">View CAT 1 MARKING SCHEME</a></p><br />
+            CAT2 MARKING SCHEME <a href="SsOFTWARECAT2MARKINGSCHEME.pdf" class="btn">View CAT 2 MARKING SCHEME</a></p><br />
+            CAT3 MARKING SCHEME<a href="softwareMKCAT3.pdf" class="btn">View CAT 3 MARKING SCHEME</a></p>
+            <h3 style="color:orangered;">CONTINOUS practical Assessments</h3>
+            <p>practical 1</p> <a href="softwareprac1.pdf" class="btn">View pratical 1</a></p><br />
+            <p>practical 2</p> <a href="COMPsoftwareprac2.pdf" class="btn">View pratical 2</a></p><br />
+            <p>practical 3</p><a href="SOFTWAREPRAC3.pdf" class="btn">View practical 3</a></p>
+            <h3 style="color:orangered;">CONTINOUS practical Observation checklist</h3>
+            <p>practical 1 checklist</p> <a href="softwarechecklist1.pdf" class="btn">View pratical 1 checklist</a></p><br />
+            <p>practical 2 checklist</p> <a href="softwarechecklist2.pdf" class="btn">View pratical 2 hecklist</a></p><br />
+            <p>practical 3 checklist</p><a href="PRACTICAL OBSERVATION CHECKLIST3sofwARE.pdf" class="btn">View practical 3 checklist</a></p>
+            <p style="color:blue;">
+                <b>Basic Electronics</b>
+                <h3>CONTINOUS ASSESSMENT CATS</h3>
+            <p>CAT 1<a href="BECAT1.pdf" class="btn">View CAT 1</a></p>
+            <p>CAT 2<a href="BECAT2.pdf" class="btn">View CAT 2</a></p>
+            <p>CAT 3<a href="cat3.pdf" class="btn">View CAT 3</a></p>
+            <h3>CONTINOUS ASSESSMENT CATS-MARKING SCHEME</h3>
+            CAT1 MARKING SCHEME <a href="cat1mk.pdf" class="btn">View CAT 1 MARKING SCHEME</a></p><br />
+            CAT2 MARKING SCHEME <a href="cat2.pdf" class="btn">View CAT 2 MARKING SCHEME</a></p><br />
+            CAT3 MARKING SCHEME<a href="cat3.pdf" class="btn">View CAT 3 MARKING SCHEME</a></p>
+            <p style="color:blue;">
+                <b>Work Ethics</b>
+                <h3>CONTINOUS ASSESSMENT CATS</h3>
+            <p>CAT 1<a href="cat1.pdf" class="btn">View CAT 1</a></p>
+            <p>CAT 2<a href="cat2.pdf" class="btn">View CAT 2</a></p>
+            <p>CAT 3<a href="cat3.pdf" class="btn">View CAT 3</a></p>
+            <h3>CONTINOUS ASSESSMENT CATS-MARKING SCHEME</h3>
+            CAT1 MARKING SCHEME <a href="cat1mk.pdf" class="btn">View CAT 1 MARKING SCHEME</a></p><br />
+            CAT2 MARKING SCHEME <a href="cat2.pdf" class="btn">View CAT 2 MARKING SCHEME</a></p><br />
+            CAT3 MARKING SCHEME<a href="cat3.pdf" class="btn">View CAT 3 MARKING SCHEME</a></p>
+        </div>
+    </div>
+    <footer>
+        <p><strong>Department of ICT and Informatics</strong> | Aberdare Technical College</p>
+        <p>&copy; 2026 All Rights Reserved</p>
+    </footer>
+</body>
+</html>
